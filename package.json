@@ -10,9 +10,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@akarui/aoi.music": "^2.1.0",
     "@akarui/aoi.panel": "github:AkaruiDevelopment/panel",
     "@types/node": "^18.0.6",
     "aoi.js": "^6.1.1",
+    "discord-oauth2": "^2.11.0",
     "node-fetch": "^3.2.6"
   }
 }

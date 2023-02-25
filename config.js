@@ -1,7 +1,7 @@
 module.exports = {
   "bot":{
     "token":process.env["token"],//bot token [secret, put it under .env]
-    "prefix":"bee ",//bot prefix
+    "prefix":["bee ","$getServerVar[prefix]"],//bot prefix
     "intents":["MessageContent", "Guilds", "GuildMessages"],//intents for discord bot
     "events":["onMessage", "onInteractionCreate"],//events
     "mobilePlatform":true//mobile presence
@@ -14,7 +14,13 @@ module.exports = {
     mainFile: "index.js",//code mainfile name
     commands: "./commands/message commands/",//message commands folder
     interaction:"./commands/slash commands/",//slash commands folder
-    theme:"orange",//panel theme
-    codetheme:"gruvbox-dark"//code editor theme
+    theme:"orange",//panel & dashboard theme
+    codetheme:"gruvbox-dark",//code editor theme
+    customIndex:"adminLogin"
+  },
+  "dash":{
+    clientId:"1048543886156501022",
+    clientSecret:process.env.secret,//available in discord.dev portal
+    redirectUri:"https://aoijs-advanced.blurr1447.repl.co/redirect",//needs to be updated on discord dev portal too!
   }
 }

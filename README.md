@@ -1,4 +1,4 @@
-# Aoi.js Advanced V6 Template With An In-Built Panel!
+# Aoi.js Advanced V6 Template With An In-Built Panel & Dashboard!
 ## Introduction To Aoi.js
 ### [Aoi.js](https://www.npmjs.com/package/aoi.js) is a npm package that simplifies coding discord bots. 
 
@@ -99,6 +99,20 @@ code: `$interactionReply[Hi <@$interactionData[author.id]> !;{newEmbed:{title:He
 
 ## Panel
 ### This Template also includes aoi.panel, which is a UI for aoi.js. Here is its [link](https://github.com/AkaruiDevelopment/panel)
+
+## Dashboard
+### Input your config in config.js under "dash"
+```json
+"dash":{
+    clientId:"your bot's id",
+    clientSecret:"client secret [take from discord.dev]",
+    redirectUri:"https://{your website address}/redirect",
+  } 
+```
+`clientId`=> Bot's Discord ID [type: snowflake]
+`clientSecret`=> Client Secret [take from discord dev portal]
+`redirect uri`=> Discord auth redirect url [also update this in discord dev portal!]
+![image](image.png)
 
 ## To Do:
 - [ ] Add Slash Commands Creating.
