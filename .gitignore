@@ -1,6 +1,8 @@
-/database/
-/node_modules/
-/.upm/
+/database/main
+/node_modules
+/.upm
+/.config
+/.git
 package-lock.json
 .replit
 replit.nix
