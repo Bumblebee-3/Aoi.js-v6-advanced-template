@@ -1,5 +1,6 @@
 /database/
 /node_modules/
+/.upm/
 package-lock.json
 .replit
 replit.nix

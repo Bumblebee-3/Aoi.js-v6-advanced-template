@@ -22,5 +22,16 @@ module.exports = {
     clientId:"1048543886156501022",
     clientSecret:process.env.secret,//available in discord.dev portal
     redirectUri:"https://aoijs-advanced.blurr1447.repl.co/redirect",//needs to be updated on discord dev portal too!
+  },
+  "music":{
+  requestOptions: {
+    offsetTimeout: 0,
+    soundcloudLikeTrackLimit: 200,
+  },
+  searchOptions: {
+    soundcloudClientId: process.env.scID,
+    /*youtubeAuth: "./auth.json",
+    youtubegl: "US",*/
   }
+}
 }

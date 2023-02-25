@@ -1,4 +1,5 @@
 # Aoi.js Advanced V6 Template With An In-Built Panel & Dashboard!
+Example preview: [link](https://aoijs-advanced.blurr1447.repl.co/)
 ## Introduction To Aoi.js
 ### [Aoi.js](https://www.npmjs.com/package/aoi.js) is a npm package that simplifies coding discord bots. 
 

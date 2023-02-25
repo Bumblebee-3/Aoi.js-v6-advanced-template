@@ -1,5 +1,5 @@
 const { AoiClient, LoadCommands } = require("aoi.js");
-const { AoiVoice } = require("@akarui/aoi.music");
+const { AoiVoice, PlayerEvents, PluginName, Cacher, Filter } = require("@akarui/aoi.music");
 const { Panel } = require("@akarui/aoi.panel");
 const { Dash } = require("./dashboard/dash.js");
 const config = require("./config.js");
@@ -60,17 +60,12 @@ panel.onError()
 
 /* INTITALIZING PANEL */
 
-const voice = new AoiVoice(bot, {
-  searchOptions: {
-    //soundcloudClientId: "Sound Cloud Id",
-    youtubegl: "US",
-  },
-  requestOptions: {
-    offsetTimeout: 0,
-    soundcloudLikeTrackLimit: 200,
-  },
-});
-
+const voice = new AoiVoice(bot, config.music);
+voice.addPlugin(PluginName.Cacher, new Cacher("memory" /* or "disk" */));
+voice.addPlugin( PluginName.Filter, new Filter( {
+    filterFromStart: false,
+}));
+ 
 /* dashboard config */
 var dashClass = new Dash(config.dash)
 dash.loadDash(bot, panel, dashClass)
