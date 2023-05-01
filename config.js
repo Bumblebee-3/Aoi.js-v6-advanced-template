@@ -1,7 +1,7 @@
 module.exports = {
   "bot":{
     "token":process.env["token"],//bot token [secret, put it under .env]
-    "prefix":["bee ","$getServerVar[prefix]"],//bot prefix
+    "prefix":["bee ","$getGuildVar[prefix]"],//bot prefix
     "intents":["MessageContent", "Guilds", "GuildMessages"],//intents for discord bot
     "events":["onMessage", "onInteractionCreate"],//events
     "mobilePlatform":true//mobile presence
